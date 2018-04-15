@@ -32,9 +32,27 @@ keytool -exportcert -alias www.jikexueyuan.com -keystore jikexueyuan.keystore -f
 
 [代码][3]
 
-###
+## 消息摘要算法
+
+### MD(Message Digest)
+1. MD5
+2. MD家族(128)
+	- MD2、MD4
+
+|算法|摘要长度|实现方|
+-|-|-
+|MD2|128|jdk
+|MD4|128|bouncy Castle|
+|MD5|128|Jdk|
+
+
+
+
+### SHA(Secure Hash Algorithm)
   
-  
+### MAC(Message Authentication Code)
+
+
   
   [1]: https://github.com/admxj/Certificate/tree/master/ssl
   [2]: https://github.com/admxj/Certificate/tree/master/src/certificate
