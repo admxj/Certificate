@@ -1,10 +1,6 @@
 package certificate;
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.security.InvalidKeyException;
-import java.security.Key;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -15,10 +11,7 @@ import java.security.cert.Certificate;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 
-import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
 
 public class CertificateUtil {
 
@@ -33,7 +26,7 @@ public class CertificateUtil {
 		return key;
 	}
 
-	public static PublicKey getPublicKeyFromKeyStore(String certificatePath) throws CertificateException, IOException {
+	public static PublicKey getPublicKeyFromKeyStore(String certificatePath) throws Exception {
 		
 		CertificateFactory factory = CertificateFactory.getInstance("X.509");
 		FileInputStream stream = new FileInputStream(certificatePath);
@@ -56,7 +49,7 @@ public class CertificateUtil {
 		return cipher.doFinal(data);
 	}
 
-	public static byte[] decrypt(byte[] data, PrivateKey publicKey) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
+	public static byte[] decrypt(byte[] data, PrivateKey publicKey) throws Exception {
 		Cipher cipher = Cipher.getInstance(publicKey.getAlgorithm());
 		cipher.init(Cipher.DECRYPT_MODE, publicKey);
 		
