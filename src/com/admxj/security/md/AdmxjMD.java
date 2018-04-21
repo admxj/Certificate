@@ -4,6 +4,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import org.apache.commons.codec.binary.Hex;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.bouncycastle.crypto.Digest;
 import org.bouncycastle.crypto.digests.MD2Digest;
 import org.bouncycastle.crypto.digests.MD4Digest;
@@ -13,7 +14,7 @@ public class AdmxjMD {
 	
 	private static String src = "security md";
 	
-	public static void main(String[] args) throws NoSuchAlgorithmException {
+	public static void main(String[] args) throws Exception {
 		
 		System.out.println("============ jdkMd5 ============");
 		jdkMd5();
@@ -23,8 +24,8 @@ public class AdmxjMD {
 		bcMd4();
 		System.out.println("============ bcMd5 ============");
 		bcMd5();
-		System.out.println("============ bcMd2 ============");
-		bcMd5();
+		System.out.println("============ ccMd5 ============");
+		ccMd5();
 	}
 	
 	public static void jdkMd5() throws NoSuchAlgorithmException{
@@ -78,5 +79,11 @@ public class AdmxjMD {
 		String md2 = org.bouncycastle.util.encoders.Hex.toHexString(md2Byte);
 		System.out.println("md2: " + md2);
 		System.out.println("result: " + "0ee18b33f7e8025bdbbc961901ff0a17".equals(md2));
+	}
+	public static void ccMd5() throws Exception{
+		String md5 = DigestUtils.md5Hex(src.getBytes());
+		System.out.println("md5: " + md5);
+		System.out.println("result: " + "ddd086eec2506afaf34515b9bc2957b2".equals(md5));
+
 	}
 }

@@ -46,10 +46,21 @@ keytool -exportcert -alias www.jikexueyuan.com -keystore jikexueyuan.keystore -f
 |MD5|128|Jdk|
 
 
-
-
 ### SHA(Secure Hash Algorithm)
-  
+
+- 安全散列算法
+- 固定长度摘要
+- SHA-1、SHA-2(SHA-224、SHA-256、SHA-384、SHA512)
+
+|算法 |摘要长度|实现方|
+-|-|-
+SHA-1|160|JDK
+SHA-224|224|Bouncy Castle
+SHA-256|256|JDK
+ SHA-384|384|JDK
+ SHA-512|512|JDK
+ 
+
 ### MAC(Message Authentication Code)
 
 
