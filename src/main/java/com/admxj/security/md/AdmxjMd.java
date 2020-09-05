@@ -10,7 +10,10 @@ import org.bouncycastle.crypto.digests.MD2Digest;
 import org.bouncycastle.crypto.digests.MD4Digest;
 import org.bouncycastle.crypto.digests.MD5Digest;
 
-public class AdmxjMD {
+/**
+ * @author 项金
+ */
+public class AdmxjMd {
 	
 	private static String src = "security md";
 	

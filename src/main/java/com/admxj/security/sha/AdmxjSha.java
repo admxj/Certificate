@@ -5,16 +5,19 @@ import java.security.NoSuchAlgorithmException;
 
 import org.apache.commons.codec.binary.Hex;
 
-public class AdmxjSHA {
+/**
+ * @author 项金
+ */
+public class AdmxjSha {
 	
 	private static String src = "security sha";
 	
 	public static void main(String[] args) throws Exception {
 		System.out.println("======= jdkSHA1 =======");
-		AdmxjSHA.jdkSHA1();
+		AdmxjSha.jdkSha1();
 	}
 	
-	public static void jdkSHA1() throws NoSuchAlgorithmException {
+	public static void jdkSha1() throws NoSuchAlgorithmException {
 		MessageDigest mDigest = MessageDigest.getInstance("SHA1");
 		mDigest.update(src.getBytes());
 		String sha = Hex.encodeHexString(mDigest.digest());

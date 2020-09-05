@@ -4,6 +4,9 @@ import java.util.Base64;
 import java.util.Base64.Decoder;
 import java.util.Base64.Encoder;
 
+/**
+ * @author 项金
+ */
 public class AdmxjBase64 {
 	
 	private static String src = "security base64";
