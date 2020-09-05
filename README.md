@@ -1,19 +1,19 @@
 # Certificate
 
 ## ssl加解密 
-##证书加密
+## 证书加密
 
-###生成密钥库
+### 生成密钥库
 ```
 keytool -genkeypair -keyalg RSA -keysize 2048 -sigalg SHA1withRSA -validity 3650 -alias www.jikexueyuan.com -keystore jikexueyuan.keystore
 ```
 
-###生成证书
+### 生成证书
 ```
 keytool -certreq -alias www.jikexueyuan.com -keystore jikexueyuan.keystore -file jikexueyuan.csr -v
 ```
 
-###自签名证书
+### 自签名证书
 ```
 keytool -exportcert -alias www.jikexueyuan.com -keystore jikexueyuan.keystore -file jikexueyuan.cer
 ```
@@ -22,7 +22,7 @@ keytool -exportcert -alias www.jikexueyuan.com -keystore jikexueyuan.keystore -f
 
 [代码][2]
 
-##Base加密方式
+## Base加密方式
 
 - jdk实现
 
