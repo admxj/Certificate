@@ -1,4 +1,39 @@
+[toc]
+
 # Certificate
+
+## 对称加密算法
+
+* DES
+
+> 数据加密标准（英语：Data Encryption Standard，缩写为 DES）是一种对称密钥加密块密码算法，
+>1976年被美国联邦政府的国家标准局确定为联邦资料处理标准（FIPS），随后在国际上广泛流传开来。它基于使用56位密钥的对称算法。
+>这个算法因为包含一些机密设计元素，相对短的密钥长度以及怀疑内含美国国家安全局（NSA）的后门而在开始时有争议，
+>DES因此受到了强烈的学院派式的审查，并以此推动了现代的块密码及其密码分析的发展。
+
+>DES现在已经不是一种安全的加密方法，主要因为它使用的56位密钥过短。1999年1月，distributed.net与电子前哨基金会合作，
+>在22小时15分钟内即公开破解了一个DES密钥。也有一些分析报告提出了该算法的理论上的弱点，虽然在实际中难以应用。为了提供实用所需的安全性，
+>可以使用DES的派生算法3DES来进行加密，虽然3DES也存在理论上的攻击方法。
+>DES标准和3DES标准已逐渐被高级加密标准（AES）所取代。另外，DES已经不再作为国家标准科技协会（前国家标准局）的一个标准。
+
+    * 3DES
+* AES
+
+>高级加密标准（英语：Advanced Encryption Standard，缩写：AES），在密码学中又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。
+>这个标准用来替代原先的DES，已经被多方分析且广为全世界所使用。经过五年的甄选流程，高级加密标准由美国国家标准与技术研究院（NIST）
+>于2001年11月26日发布于FIPS PUB 197，并在2002年5月26日成为有效的标准。现在，高级加密标准已然成为对称密钥加密中最流行的算法之一。
+
+* PBE
+> (Password-based Encryption Standard) 基于口令加密
+>
+>
+
+* IDEA
+
+## 非对称加密算法
+* DH
+
+> 密钥交换
 
 ## ssl加解密 
 ## 证书加密
@@ -8,7 +43,7 @@
 keytool -genkeypair -keyalg RSA -keysize 2048 -sigalg SHA1withRSA -validity 3650 -alias www.jikexueyuan.com -keystore jikexueyuan.keystore
 ```
 
-### 生成证书
+### 生成证书请求
 ```
 keytool -certreq -alias www.jikexueyuan.com -keystore jikexueyuan.keystore -file jikexueyuan.csr -v
 ```
@@ -22,7 +57,7 @@ keytool -exportcert -alias www.jikexueyuan.com -keystore jikexueyuan.keystore -f
 
 [代码][2]
 
-## Base加密方式
+## Base编码方式
 
 - jdk实现
 
