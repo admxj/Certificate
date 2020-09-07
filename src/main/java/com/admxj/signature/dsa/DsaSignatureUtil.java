@@ -1,6 +1,6 @@
-package signature.dsa;
+package com.admxj.signature.dsa;
 
-import signature.SignatureUtil;
+import com.admxj.signature.SignatureUtil;
 
 import java.security.*;
 import java.security.spec.PKCS8EncodedKeySpec;

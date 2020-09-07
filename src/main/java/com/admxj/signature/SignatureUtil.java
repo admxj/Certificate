@@ -1,4 +1,4 @@
-package signature;
+package com.admxj.signature;
 
 import lombok.Data;
 
@@ -35,7 +35,7 @@ public interface SignatureUtil {
     /**
      * 生成密钥对
      *
-     * @return signature key
+     * @return com.admxj.signature key
      * @throws NoSuchAlgorithmException the no such algorithm exception
      */
     public SignatureKey initKey() throws NoSuchAlgorithmException;

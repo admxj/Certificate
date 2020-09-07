@@ -1,4 +1,4 @@
-package security.symmetry.aes;
+package com.admxj.security.symmetry.aes;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.slf4j.Logger;

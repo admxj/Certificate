@@ -1,6 +1,6 @@
-package signature.rsa;
+package com.admxj.signature.rsa;
 
-import signature.SignatureUtil;
+import com.admxj.signature.SignatureUtil;
 
 import java.security.*;
 import java.security.spec.InvalidKeySpecException;
@@ -8,7 +8,7 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 
 /**
- * The type Rsa signature util.
+ * The type Rsa com.admxj.signature util.
  *
  * @author 项金
  * @version Id : RsaSignatureUtil, v 0.1 2020/9/6 5:24 下午 项金 Exp $

@@ -1,8 +1,7 @@
-package security.symmetry.pbe;
+package com.admxj.security.symmetry.pbe;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import security.symmetry.des.Demo3Des;
 
 import javax.crypto.*;
 import javax.crypto.spec.PBEKeySpec;

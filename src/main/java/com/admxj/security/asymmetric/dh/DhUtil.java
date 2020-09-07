@@ -1,4 +1,4 @@
-package security.asymmetric.dh;
+package com.admxj.security.asymmetric.dh;
 
 import lombok.Data;
 

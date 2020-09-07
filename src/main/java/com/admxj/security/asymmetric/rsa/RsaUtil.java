@@ -1,12 +1,12 @@
-package security.asymmetric.rsa;
+package com.admxj.security.asymmetric.rsa;
 
 import lombok.Data;
-import sun.security.rsa.RSAPrivateCrtKeyImpl;
-import sun.security.rsa.RSAPublicKeyImpl;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
+import java.security.interfaces.RSAPrivateCrtKey;
+import java.security.interfaces.RSAPublicKey;
 
 /**
  * @author 项金
@@ -18,18 +18,18 @@ public class RsaUtil {
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
         keyPairGenerator.initialize(4096);
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
-        RSAPublicKeyImpl publicKey = (RSAPublicKeyImpl) keyPair.getPublic();
-        RSAPrivateCrtKeyImpl privateKey = (RSAPrivateCrtKeyImpl) keyPair.getPrivate();
+        RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
+        RSAPrivateCrtKey privateKey = (RSAPrivateCrtKey) keyPair.getPrivate();
         return new RsaKey(publicKey, privateKey);
     }
 }
 
 @Data
 class RsaKey {
-    private RSAPublicKeyImpl publicKey;
-    private RSAPrivateCrtKeyImpl privateKey;
+    private RSAPublicKey publicKey;
+    private RSAPrivateCrtKey privateKey;
 
-    public RsaKey(RSAPublicKeyImpl publicKey, RSAPrivateCrtKeyImpl privateKey) {
+    public RsaKey(RSAPublicKey publicKey, RSAPrivateCrtKey privateKey) {
         this.publicKey = publicKey;
         this.privateKey = privateKey;
     }

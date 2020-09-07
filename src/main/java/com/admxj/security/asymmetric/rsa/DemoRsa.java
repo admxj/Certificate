@@ -1,10 +1,8 @@
-package security.asymmetric.rsa;
+package com.admxj.security.asymmetric.rsa;
 
 import org.apache.commons.codec.binary.Hex;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.security.rsa.RSAPrivateCrtKeyImpl;
-import sun.security.rsa.RSAPublicKeyImpl;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -13,6 +11,7 @@ import javax.crypto.NoSuchPaddingException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.interfaces.RSAPrivateCrtKey;
+import java.security.interfaces.RSAPublicKey;
 
 /**
  * @author 项金
@@ -27,7 +26,7 @@ public class DemoRsa {
     public static void main(String[] args) throws NoSuchPaddingException, NoSuchAlgorithmException, BadPaddingException, IllegalBlockSizeException, InvalidKeyException {
 
         RsaKey rsaKey = RsaUtil.initKey();
-        RSAPublicKeyImpl publicKey = rsaKey.getPublicKey();
+        RSAPublicKey publicKey = rsaKey.getPublicKey();
         RSAPrivateCrtKey privateKey = rsaKey.getPrivateKey();
 
         logger.debug("私钥: {}", privateKey);

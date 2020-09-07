@@ -1,9 +1,9 @@
-package signature.rsa;
+package com.admxj.signature.rsa;
 
 import org.apache.commons.codec.binary.Hex;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import signature.SignatureUtil;
+import com.admxj.signature.SignatureUtil;
 
 import java.security.PrivateKey;
 import java.security.PublicKey;

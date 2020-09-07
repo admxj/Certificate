@@ -1,4 +1,4 @@
-package certificate;
+package com.admxj.certificate;
 
 import javax.crypto.Cipher;
 import java.io.IOException;
